@@ -7,6 +7,7 @@
 # Copyright (C) 2022-2023  w1ld3r
 # Copyright (C) 2022-2023  Charles Ferguson (gerph)
 # Copyright (C) 2024-2024  WeAct Studio
+# Copyright (C) 2025-2025  CherryChain(denkijoshi)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -1129,3 +1130,88 @@ class Ping:
             min_size=2
         )
         display_themed_line_graph(theme_data['LINE_GRAPH'], cls.last_values_ping)
+
+class MonsterHP:
+    @staticmethod
+    def stats(forced_refresh = False):
+        default_monsters_data = [
+            {"name": "Monster1", "hp_percent": 100, "hp": 1000, "max_hp": 1000},
+            {"name": "Monster2", "hp_percent": 100, "hp": 1000, "max_hp": 1000},
+            {"name": "Monster3", "hp_percent": 100, "hp": 1000, "max_hp": 1000}
+        ]
+        
+        config_path = "config_path.json"
+        monster_data_path = None
+        
+        try:
+            with open(config_path, "r", encoding="utf-8") as f:
+                import json
+                config_data = json.load(f)
+                monster_data_path = config_data.get("monster_data_path")
+                if not monster_data_path:
+                    logger.warning("No monster_data_path specified in config file")
+                    monsters_data = default_monsters_data
+                    return
+        except Exception as e:
+            logger.warning(f"Could not load config file: {e}")
+            monsters_data = default_monsters_data
+            return
+        
+        monsters_data = []
+        try:
+            with open(monster_data_path, "r", encoding="utf-8") as f:
+                import json
+                data = json.load(f)
+                monsters_data = data.get("monsters", [])
+        except Exception as e:
+            logger.warning(f"Could not load monster data from {monster_data_path}: {e}")
+            monsters_data = default_monsters_data
+
+        for i in range(min(3, len(monsters_data))):
+            monster = monsters_data[i]
+            monster_section = f"MONSTER{i+1}"
+            
+            if monster_section not in config.THEME_DATA['STATS']:
+                continue
+                
+            monster_theme_data = config.THEME_DATA['STATS'][monster_section]
+            
+            if monster_theme_data.get('NAME', {}).get('TEXT', {}).get('SHOW', False):
+                monster_name = monster["name"]
+                name_width = sum(2 if ord(c) > 127 else 1 for c in monster_name)
+                target_width = 16
+                
+                if name_width < target_width:
+                    padding = target_width - name_width
+                    formatted_name = monster_name + " " * padding
+                elif name_width > target_width:
+                    formatted_name = ""
+                    current_width = 0
+                    for c in monster_name:
+                        char_width = 2 if ord(c) > 127 else 1
+                        if current_width + char_width <= target_width:
+                            formatted_name += c
+                            current_width += char_width
+                        else:
+                            break
+                else:
+                    formatted_name = monster_name
+                
+                display_themed_value(
+                    theme_data=monster_theme_data['NAME']['TEXT'],
+                    value=formatted_name
+                )
+            
+            if monster_theme_data.get('HP', {}).get('RADIAL', {}).get('SHOW', False):
+                display_themed_radial_bar(
+                    theme_data=monster_theme_data['HP']['RADIAL'],
+                    value=monster["hp_percent"],
+                    min_size=3,
+                    unit="%"
+                )
+                
+            if monster_theme_data.get('HP_TEXT', {}).get('TEXT', {}).get('SHOW', False):
+                display_themed_value(
+                    theme_data=monster_theme_data['HP_TEXT']['TEXT'],
+                    value=f"{monster['hp']}/{monster['max_hp']}"
+                )

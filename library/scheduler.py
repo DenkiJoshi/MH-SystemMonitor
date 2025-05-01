@@ -5,6 +5,7 @@
 # Copyright (C) 2022-2023  Rollbacke
 # Copyright (C) 2022-2023  Ebag333
 # Copyright (C) 2024-2024  WeAct Studio
+# Copyright (C) 2025-2025  CherryChain(denkijoshi)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -248,3 +249,8 @@ def QueueHandler():
         f, args = config.update_queue.get()
         if f:
             f(*args)
+            
+@async_job("MonsterHP_Stats")
+@schedule(timedelta(seconds=config.THEME_DATA['STATS']['MONSTER1'].get("INTERVAL", 0)).total_seconds())
+def MonsterHPStats():
+    stats.MonsterHP.stats()

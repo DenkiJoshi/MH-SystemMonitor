@@ -1,0 +1,155 @@
+STATS:
+  CPU:
+    PERCENTAGE:
+      INTERVAL: 1
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_COLOR: 192, 192, 192
+        FONT_SIZE: 14
+        SHOW: true
+        X: 70
+        Y: 435
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_COLOR: 192, 192, 192
+        FONT_SIZE: 14
+        SHOW: true
+        X: 110
+        Y: 435
+  DATE:
+    DAY:
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_COLOR: 192, 192, 192
+        FONT_SIZE: 16
+        SHOW: true
+        X: 200
+        Y: 433
+    HOUR:
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_COLOR: 192, 192, 192
+        FONT_SIZE: 16
+        SHOW: true
+        X: 200
+        Y: 450
+    INTERVAL: 1
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_COLOR: 192, 192, 192
+        FONT_SIZE: 14
+        SHOW: true
+        X: 70
+        Y: 452
+    TEMPERATURE:
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_COLOR: 192, 192, 192
+        FONT_SIZE: 14
+        SHOW: true
+        X: 110
+        Y: 452
+  MONSTER1:
+    HP:
+      RADIAL:
+        ANGLE_END: 270
+        ANGLE_SEP: 5
+        ANGLE_START: -90
+        ANGLE_STEPS: 16
+        BACKGROUND_IMAGE: background.png
+        BAR_COLOR: 247, 200, 136
+        CLOCKWISE: true
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_COLOR: 192, 192, 192
+        FONT_SIZE: 40
+        MAX_VALUE: 100
+        MIN_VALUE: 0
+        RADIUS: 80
+        SHOW: true
+        SHOW_TEXT: true
+        SHOW_UNIT: false
+        WIDTH: 17
+        X: 160
+        Y: 130
+    HP_TEXT:
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_COLOR: 192, 192, 192
+        FONT_SIZE: 15
+        SHOW: true
+        X: 110
+        Y: 155
+    INTERVAL: 1
+    NAME:
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: M_PLUS_1p/MPLUS1p-Regular.ttf
+        FONT_COLOR: 255, 255, 255
+        FONT_SIZE: 20
+        SHOW: true
+        X: 80
+        Y: 20
+  MONSTER2:
+    HP:
+      RADIAL:
+        ANGLE_END: 270
+        ANGLE_SEP: 5
+        ANGLE_START: -90
+        ANGLE_STEPS: 16
+        BACKGROUND_IMAGE: background.png
+        BAR_COLOR: 128, 0, 64
+        CLOCKWISE: true
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_COLOR: 192, 192, 192
+        FONT_SIZE: 40
+        MAX_VALUE: 100
+        MIN_VALUE: 0
+        RADIUS: 80
+        SHOW: true
+        SHOW_TEXT: true
+        SHOW_UNIT: false
+        WIDTH: 17
+        X: 160
+        Y: 340
+    HP_TEXT:
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_COLOR: 192, 192, 192
+        FONT_SIZE: 15
+        SHOW: true
+        X: 110
+        Y: 365
+    INTERVAL: 1
+    NAME:
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: M_PLUS_1p/MPLUS1p-Regular.ttf
+        FONT_COLOR: 255, 255, 255
+        FONT_SIZE: 20
+        SHOW: true
+        X: 80
+        Y: 230
+author: '@denkijoshi'
+display:
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 255, 255, 255
+static_images:
+  BACKGROUND:
+    HEIGHT: 480
+    PATH: background.png
+    WIDTH: 320
+    X: 0
+    Y: 0

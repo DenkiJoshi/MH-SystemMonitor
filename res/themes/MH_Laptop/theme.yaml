@@ -1,0 +1,178 @@
+STATS:
+  CPU:
+    PERCENTAGE:
+      GRAPH:
+        BACKGROUND_COLOR: 255, 255, 255
+        BACKGROUND_IMAGE: background.png
+        BAR_COLOR: 128, 128, 192
+        BAR_OUTLINE: true
+        HEIGHT: 5
+        MAX_VALUE: 100
+        MIN_VALUE: 0
+        SHOW: true
+        WIDTH: 90
+        X: 155
+        Y: 93
+      INTERVAL: 1
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_COLOR: 109, 103, 99
+        FONT_SIZE: 10
+        SHOW: true
+        X: 250
+        Y: 90
+    TEMPERATURE:
+      INTERVAL: 5
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_COLOR: 255, 83, 83
+        FONT_SIZE: 18
+        SHOW: true
+        X: 220
+        Y: 71
+  DATE:
+    DAY:
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_COLOR: 109, 103, 99
+        FONT_SIZE: 18
+        SHOW: true
+        X: 150
+        Y: 410
+    HOUR:
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_COLOR: 109, 103, 99
+        FONT_SIZE: 18
+        SHOW: true
+        X: 160
+        Y: 430
+    INTERVAL: 1
+  GPU:
+    INTERVAL: 1
+    PERCENTAGE:
+      GRAPH:
+        BACKGROUND_IMAGE: background.png
+        BAR_COLOR: 128, 128, 192
+        BAR_OUTLINE: true
+        HEIGHT: 5
+        MAX_VALUE: 100
+        MIN_VALUE: 0
+        SHOW: true
+        WIDTH: 90
+        X: 155
+        Y: 130
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_COLOR: 109, 103, 99
+        FONT_SIZE: 10
+        SHOW: true
+        X: 250
+        Y: 127
+    TEMPERATURE:
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: jetbrains-mono/JetBrainsMono-Bold.ttf
+        FONT_COLOR: 255, 83, 83
+        FONT_SIZE: 18
+        SHOW: true
+        X: 220
+        Y: 108
+  MONSTER1:
+    HP:
+      RADIAL:
+        ANGLE_END: 270
+        ANGLE_SEP: 0
+        ANGLE_START: -90
+        ANGLE_STEPS: 1
+        BACKGROUND_IMAGE: background.png
+        BAR_COLOR: 109, 103, 99
+        CLOCKWISE: true
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_COLOR: 109, 103, 99
+        FONT_SIZE: 25
+        MAX_VALUE: 100
+        MIN_VALUE: 0
+        RADIUS: 45
+        SHOW: true
+        SHOW_TEXT: true
+        SHOW_UNIT: false
+        WIDTH: 7
+        X: 88
+        Y: 290
+    HP_TEXT:
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_COLOR: 109, 103, 99
+        FONT_SIZE: 15
+        SHOW: true
+        X: 40
+        Y: 345
+    INTERVAL: 1
+    NAME:
+      TEXT:
+        BACKGROUND_COLOR: 69, 65, 59
+        FONT: M_PLUS_1p/MPLUS1p-Regular.ttf
+        FONT_COLOR: 255, 255, 255
+        FONT_SIZE: 15
+        SHOW: true
+        X: 28
+        Y: 205
+  MONSTER2:
+    HP:
+      RADIAL:
+        ANGLE_END: 270
+        ANGLE_SEP: 0
+        ANGLE_START: -90
+        ANGLE_STEPS: 1
+        BACKGROUND_IMAGE: background.png
+        BAR_COLOR: 109, 103, 99
+        CLOCKWISE: true
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_COLOR: 109, 103, 99
+        FONT_SIZE: 25
+        MAX_VALUE: 100
+        MIN_VALUE: 0
+        RADIUS: 45
+        SHOW: true
+        SHOW_TEXT: true
+        SHOW_UNIT: false
+        WIDTH: 7
+        X: 234
+        Y: 290
+    HP_TEXT:
+      TEXT:
+        BACKGROUND_IMAGE: background.png
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_COLOR: 109, 103, 99
+        FONT_SIZE: 15
+        SHOW: true
+        X: 185
+        Y: 345
+    INTERVAL: 1
+    NAME:
+      TEXT:
+        BACKGROUND_COLOR: 69, 65, 59
+        FONT: M_PLUS_1p/MPLUS1p-Regular.ttf
+        FONT_COLOR: 255, 255, 255
+        FONT_SIZE: 15
+        SHOW: true
+        X: 176
+        Y: 205
+author: '@denkijoshi'
+display:
+  DISPLAY_ORIENTATION: portrait
+  DISPLAY_RGB_LED: 255, 255, 255
+static_images:
+  BACKGROUND:
+    HEIGHT: 480
+    PATH: background.png
+    WIDTH: 320
+    X: 0
+    Y: 0

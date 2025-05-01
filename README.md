@@ -31,4 +31,4 @@ Size: 58.5mm x 87.7mm
 3. The use of a MOD is required. We are not responsible for data loss caused by the use of a MOD.
 4. Please refer to this note for detailed instructions.
 
-> For reference https://editor.note.com/notes/ncc04285158d1
+> For reference https://note.com/denkijoshi/n/ncc04285158d1

@@ -4,6 +4,7 @@
 
 # Copyright (C) 2021-2023  Matthieu Houdebine (mathoudebine)
 # Copyright (C) 2024-2024  WeAct Studio
+# Copyright (C) 2025-2025  CherryChain(denkijoshi)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -1323,6 +1324,12 @@ class theme_editor:
                 if config.THEME_DATA['STATS']['PING'].get("INTERVAL", 0) > 0:
                     error_text = "Ping stats"
                     stats.Ping.stats()
+                for i in range(1, 4):
+                    monster_section = f"MONSTER{i}"
+                    if monster_section in config.THEME_DATA["STATS"]:
+                        if config.THEME_DATA["STATS"][monster_section].get("INTERVAL", 0) > 0:
+                            error_text = f"Monster{i} stats"
+                            stats.MonsterHP.stats(True)
             
                 dynamic_images.dynamic_images.init()
                 dynamic_texts.dynamic_texts.init()

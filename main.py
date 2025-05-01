@@ -9,6 +9,7 @@
 # Copyright (C) 2022-2023  Charles Ferguson (gerph)
 # Copyright (C) 2022-2023  Russ Nelson (RussNelson)
 # Copyright (C) 2024-2024  WeAct Studio
+# Copyright (C) 2025-2025  CherryChain(denkijoshi)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -278,6 +279,8 @@ def scheduler_init():
     scheduler.WeatherStats()
     time.sleep(0.15)
     scheduler.PingStats()
+    time.sleep(0.15)
+    scheduler.MonsterHPStats()
     time.sleep(0.15)
 
 if platform.system() == "Windows":

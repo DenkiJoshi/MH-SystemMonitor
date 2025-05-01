@@ -4,6 +4,7 @@
 
 # Copyright (C) 2021-2023  Matthieu Houdebine (mathoudebine)
 # Copyright (C) 2024-2024  WeAct Studio
+# Copyright (C) 2025-2025  CherryChain(denkijoshi)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -231,7 +232,7 @@ class ConfigWindow:
         # self.window.geometry("770x600")
 
         # Make TK look better with Sun Valley ttk theme
-        sv_ttk.set_theme("light")
+        # sv_ttk.set_theme("light")
         
         self.theme_preview_img = None
 
@@ -1524,7 +1525,7 @@ class PingWeatherConfigWindow:
         self.main_window = main_window
 
         # Make TK look better with Sun Valley ttk theme
-        sv_ttk.set_theme("light")
+        # sv_ttk.set_theme("light")
 
         # ping frame
         self.ping_frame = tkinter.Frame(self.window)
@@ -1730,7 +1731,7 @@ class WorkspaceSettingsWindow:
         self.main_window = main_window
 
         # Make TK look better with Sun Valley ttk theme
-        sv_ttk.set_theme("light")
+        # sv_ttk.set_theme("light")
 
         # theme folder 
         theme_folder_label = ttk.Label(self.window, text=_("Themes Folder:"))
